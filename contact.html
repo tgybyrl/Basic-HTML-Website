@@ -2,7 +2,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Contact</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        color: #343a40;
+      }
+
+      .container {
+        width: 500px;
+        margin: 0 auto;
+      }
+
+      form {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- Login Form Code -->
+      <form action="" method="POST">
+        <div class="email">
+          <label for="first">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="password">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your Password"
+            required
+          />
+        </div>
+        <button>Sign-in</button>
+      </form>
+      <a href="index.html">Back</a>
+    </div>
+  </body>
 </html>
