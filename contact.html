@@ -10,14 +10,77 @@
       }
 
       .container {
-        width: 500px;
+        width: 250px;
         margin: 0 auto;
+        margin-top: 100px;
       }
 
       form {
         display: grid;
-        align-content: center;
-        justify-content: center;
+        grid-template-columns: 1 / 2;
+        grid-template-rows: 5 / 6;
+        gap: 20px;
+        border-radius: 5px;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .icon {
+        margin-top: 10px;
+        height: 32px;
+        justify-self: center;
+      }
+
+      label {
+        font-weight: 600;
+        font-family: sans-serif;
+        text-transform: capitalize;
+        margin-bottom: 5px;
+        font-size: 30px;
+      }
+
+      .email {
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .password {
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        width: 200px;
+        border-radius: 5px;
+        height: 30px;
+      }
+
+      .btn--sign {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1;
+        justify-self: center;
+        width: 150px;
+        grid-column: 1 / -1;
+        background-color: #343a40;
+        color: #fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      .btn--back {
+        height: 24px;
+        background-color: #495057;
+        border-radius: 5px;
+      }
+
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        text-decoration: none;
+        color: #fff;
       }
     </style>
   </head>
@@ -25,6 +88,31 @@
     <div class="container">
       <!-- Login Form Code -->
       <form action="" method="POST">
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+        >
+          <rect width="256" height="256" fill="none" />
+          <circle
+            cx="128"
+            cy="96"
+            r="64"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+          <path
+            d="M32,216c19.37-33.47,54.55-56,96-56s76.63,22.53,96,56"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+        </svg>
         <div class="email">
           <label for="first">Email:</label>
           <input
@@ -45,9 +133,9 @@
             required
           />
         </div>
-        <button>Sign-in</button>
+        <button class="btn btn--sign">Sign-in</button>
       </form>
-      <a href="index.html">Back</a>
+      <button class="btn btn--back"><a href="index.html">Back</a></button>
     </div>
   </body>
 </html>
