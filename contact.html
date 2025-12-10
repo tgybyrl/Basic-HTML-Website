@@ -17,15 +17,15 @@
 
       form {
         display: grid;
-        grid-template-columns: 1 / 2;
-        grid-template-rows: 5 / 6;
-        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 1fr 1fr 44px;
+        gap: 10px;
         border-radius: 5px;
         box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
       }
 
       .icon {
-        margin-top: 10px;
+        margin-top: 15px;
         height: 32px;
         justify-self: center;
       }
@@ -38,13 +38,21 @@
         font-size: 30px;
       }
 
-      .email {
+      .name {
+        grid-row: -5 / -4;
         justify-self: center;
         display: flex;
         flex-direction: column;
       }
 
-      .password {
+      .email {
+        grid-row: 3 / 4;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .message {
         justify-self: center;
         display: flex;
         flex-direction: column;
@@ -54,19 +62,21 @@
         width: 200px;
         border-radius: 5px;
         height: 30px;
+        margin-bottom: 20px;
       }
 
-      .btn--sign {
+      .btn--send {
         font-size: 18px;
         font-weight: 600;
         letter-spacing: 1;
         justify-self: center;
         width: 150px;
-        grid-column: 1 / -1;
         background-color: #343a40;
         color: #fff;
         border-radius: 5px;
         margin-bottom: 10px;
+        grid-row: 5/6;
+        height: auto;
       }
 
       .btn--back {
@@ -113,27 +123,41 @@
             stroke-width="16"
           />
         </svg>
+        <div class="name">
+          <label for="name">Name:</label>
+          <input
+            class="input input--name"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
         <div class="email">
           <label for="first">Email:</label>
           <input
+            class="input input--email"
             type="email"
             name="email"
             id="email"
-            placeholder="Enter your Email"
+            placeholder="Enter your e-mail"
             required
           />
         </div>
-        <div class="password">
-          <label for="password">Password:</label>
+        <div class="message">
+          <label for="text">Message:</label>
           <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Enter your Password"
+            class="input input--message"
+            type="text"
+            name="message"
+            id="message"
+            size="60"
+            placeholder="Enter your message"
             required
           />
         </div>
-        <button class="btn btn--sign">Sign-in</button>
+        <button class="btn btn--send">Send</button>
       </form>
       <button class="btn btn--back"><a href="index.html">Back</a></button>
     </div>
